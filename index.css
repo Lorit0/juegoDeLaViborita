@@ -56,3 +56,41 @@ button {
 button:hover {
     background-color: #64dd17;
 }
+
+/* Estilo para los botones de control */
+
+.controls {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    max-width: 150px;
+    margin: 20px auto;
+}
+
+.controls button {
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Alinear los botones en el formato de una flecha */
+#upButton {
+    grid-column: 2; /* Ubica el botón en el centro de la fila superior */
+}
+
+#leftButton {
+    grid-column: 1; /* Alinea el botón de la izquierda */
+}
+
+#rightButton {
+    grid-column: 3; /* Alinea el botón de la derecha */
+}
+
+#downButton {
+    grid-column: 2; /* Ubica el botón en el centro de la fila inferior */
+    grid-row: 2;
+}

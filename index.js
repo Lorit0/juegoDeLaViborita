@@ -90,6 +90,20 @@ document.addEventListener("keydown", event => {
     else if (event.key === "ArrowDown" && direction !== "UP") direction = "DOWN"
 })
 
+// Botones de control para dispositivos móviles
+document.getElementById("upButton").addEventListener("click", () => {
+    if (direction !== "DOWN") direction = "UP"
+})
+document.getElementById("downButton").addEventListener("click", () => {
+    if (direction !== "UP") direction = "DOWN"
+})
+document.getElementById("leftButton").addEventListener("click", () => {
+    if (direction !== "RIGHT") direction = "LEFT"
+})
+document.getElementById("rightButton").addEventListener("click", () => {
+    if (direction !== "LEFT") direction = "RIGHT"
+})
+
 // Inicia el juego
 startButton.addEventListener("click", () => {
     startButton.disabled = true // Deshabilita el botón al iniciar
