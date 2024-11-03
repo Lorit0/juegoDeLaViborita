@@ -12,7 +12,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
+    width: 100vw;
+    padding: 5px;
+    overflow: hidden;
 }
 
 .container {
@@ -21,10 +23,12 @@ body {
     background-color: #333;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 400px;
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 2em;
     margin-bottom: 20px;
     color: #76ff03;
 }
@@ -35,6 +39,10 @@ h1 {
     border-radius: 10px;
     display: block;
     margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
+    height: auto; /* Hace que el canvas sea responsive */
+    aspect-ratio: 1 / 1; /* Mantiene una relación de aspecto cuadrada */
 }
 
 #score {
@@ -58,17 +66,17 @@ button:hover {
 }
 
 /* Estilo para los botones de control */
-
 .controls {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
     gap: 10px;
-    max-width: 150px;
-    margin: 20px auto;
+    max-width: 200px;
+    margin: 10px auto;
 }
 
 .controls button {
-    padding: 10px;
+    padding: 15px;
     font-size: 24px;
     cursor: pointer;
     background-color: #4caf50;
@@ -79,18 +87,29 @@ button:hover {
 
 /* Alinear los botones en el formato de una flecha */
 #upButton {
-    grid-column: 2; /* Ubica el botón en el centro de la fila superior */
+    grid-column: 2;
 }
 
 #leftButton {
-    grid-column: 1; /* Alinea el botón de la izquierda */
+    grid-column: 1;
 }
 
 #rightButton {
-    grid-column: 3; /* Alinea el botón de la derecha */
+    grid-column: 3;
 }
 
 #downButton {
-    grid-column: 2; /* Ubica el botón en el centro de la fila inferior */
+    grid-column: 2;
     grid-row: 2;
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+    .controls button {
+        padding: 10px;
+        font-size: 20px;
+    }
 }
